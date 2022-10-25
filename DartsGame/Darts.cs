@@ -12,7 +12,22 @@ namespace DartsGame
         /// <returns>The earned points.</returns>
         public static int GetScore(double x, double y)
         {
-            throw new NotImplementedException("You need to implement this method.");
+            if ((Math.Pow(x, 2) + Math.Pow(y, 2)) <= 1)
+            {
+                return 10;
+            }
+            else if ((Math.Pow(x, 2) + Math.Pow(y, 2)) <= 25)
+            {
+                return 5;
+            }
+            else if ((Math.Pow(x, 2) + Math.Pow(y, 2)) <= 100)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
